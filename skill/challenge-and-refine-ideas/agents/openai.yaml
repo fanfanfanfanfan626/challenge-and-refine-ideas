@@ -1,0 +1,4 @@
+interface:
+  display_name: "Idea Council"
+  short_description: "Refine ideas through independent, challenging perspectives"
+  default_prompt: "Use $challenge-and-refine-ideas to explore, refine, or challenge my idea with the lightest useful council."
