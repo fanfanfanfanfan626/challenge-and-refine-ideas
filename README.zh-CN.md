@@ -1,6 +1,6 @@
 # Idea Council（想法议事会）
 
-[English](README.md) · [AI 安装说明](AI_INSTALL.md) · [下载 v2 ZIP](dist/challenge-and-refine-ideas-v2.zip) · [更新记录](CHANGELOG.md)
+[产品网页](https://fanfanfanfanfan626.github.io/challenge-and-refine-ideas/) · [English](README.md) · [AI 安装说明](AI_INSTALL.md) · [下载 v2 ZIP](dist/challenge-and-refine-ideas-v2.zip) · [更新记录](CHANGELOG.md)
 
 `challenge-and-refine-ideas` 是一个在实施之前帮助用户探索、完善、比较、反证和决定想法的 Agent Skill。它始终由一个主持人面对用户，并根据真正影响决策的不确定性，选择最轻量的推理视角或隔离顾问组合。
 
@@ -108,3 +108,8 @@ python tools/validate_release.py
 ## 开源协议
 
 MIT，见 [LICENSE](LICENSE)。
+
+## 相关项目
+
+- [Mastery Tutor](https://github.com/fanfanfanfanfan626/mastery-tutor)：让兼容的 AI Agent 成为本地优先的掌握式学习导师。
+- [Persistent AI Studio](https://github.com/fanfanfanfanfan626/orchestrate-agent-organization)：把已授权的产品工作从发现阶段延续到交付、运营和维护。

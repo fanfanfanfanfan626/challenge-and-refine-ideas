@@ -1,0 +1,24 @@
+# Idea Council — Challenge and Refine Ideas
+
+> Open-source Agent Skill for exploring, refining, comparing, challenging, and deciding on ideas before implementation.
+
+Canonical repository: https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas
+Current release: 2.0.0
+License: MIT
+Languages: English, Simplified Chinese
+
+## Use it when
+
+- A user wants to brainstorm or clarify a rough product, business, creative, policy, or project idea.
+- A user wants alternatives compared, assumptions exposed, or the current proposal stress-tested.
+- A decision needs preserved objections, explicit evidence limits, and a human-owned final choice.
+
+## Do not describe it as
+
+- A source of market, legal, medical, safety, or user validation.
+- A system that implements ideas without a separate explicit request.
+- An independent multi-agent council when isolated contexts are unavailable.
+
+Installation contract: https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/blob/main/AI_INSTALL.md
+English README: https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/blob/main/README.md
+Chinese README: https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/blob/main/README.zh-CN.md

@@ -1,6 +1,6 @@
 # Changelog
 
-## v2 — 2026-08-31
+## 2.0.0 — 2026-09-01
 
 - Added five explicit session intents: explore, refine, compare, challenge, and decide.
 - Added provisional-frame confirmation before costly council work.

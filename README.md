@@ -1,6 +1,8 @@
 # Idea Council — Challenge and Refine Ideas
 
-[简体中文](README.zh-CN.md) · [AI installation guide](AI_INSTALL.md) · [Download v2 ZIP](dist/challenge-and-refine-ideas-v2.zip) · [Changelog](CHANGELOG.md)
+[Website](https://fanfanfanfanfan626.github.io/challenge-and-refine-ideas/) · [简体中文](README.zh-CN.md) · [AI installation guide](AI_INSTALL.md) · [Download v2 ZIP](dist/challenge-and-refine-ideas-v2.zip) · [Changelog](CHANGELOG.md)
+
+[![Release](https://img.shields.io/github/v/release/fanfanfanfanfan626/challenge-and-refine-ideas?label=release)](https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/releases)
 
 `challenge-and-refine-ideas` is an agent skill for exploring, refining, comparing, challenging, and deciding on early ideas before implementation. One facilitator stays accountable to the user while the system selects the lightest useful set of reasoning lenses or isolated advisers.
 
@@ -86,7 +88,7 @@ Copy-Item ".\challenge-and-refine-ideas\skill\challenge-and-refine-ideas" $desti
 ### macOS or Linux
 
 ```bash
-git clone https://github.com/fanfanfanfan626/challenge-and-refine-ideas.git
+git clone https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas.git
 mkdir -p ~/.codex/skills
 cp -R challenge-and-refine-ideas/skill/challenge-and-refine-ideas ~/.codex/skills/challenge-and-refine-ideas
 ```
@@ -137,3 +139,8 @@ The release validator checks package structure, frontmatter, metadata, linked re
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+## Related projects
+
+- [Mastery Tutor](https://github.com/fanfanfanfanfan626/mastery-tutor) turns compatible AI agents into local-first mastery tutors.
+- [Persistent AI Studio](https://github.com/fanfanfanfanfan626/orchestrate-agent-organization) carries authorized product work from discovery into delivery and long-term stewardship.
