@@ -1,10 +1,10 @@
 # Idea Council（想法议事会）
 
-[产品网页](https://fanfanfanfanfan626.github.io/challenge-and-refine-ideas/) · [English](README.md) · [AI 安装说明](AI_INSTALL.md) · [下载 v2 ZIP](dist/challenge-and-refine-ideas-v2.zip) · [更新记录](CHANGELOG.md)
+[产品网页](https://fanfanfanfanfan626.github.io/challenge-and-refine-ideas/) · [English](README.md) · [AI 安装说明](AI_INSTALL.md) · [使用示例](EXAMPLES.md) · [兼容性证据](COMPATIBILITY.md) · [下载 v2.0.1 ZIP](dist/challenge-and-refine-ideas-v2.0.1.zip) · [更新记录](CHANGELOG.md)
 
 `challenge-and-refine-ideas` 是一个在实施之前帮助用户探索、完善、比较、反证和决定想法的 Agent Skill。它始终由一个主持人面对用户，并根据真正影响决策的不确定性，选择最轻量的推理视角或隔离顾问组合。
 
-它优先适配 Codex，也可以迁移到支持本地 Skill 的其他 Agent 平台；如果需要真正独立的顾问会议，平台还必须支持干净的子 Agent 上下文。
+它优先适配 Codex，也可以迁移到支持本地 Skill 的其他 Agent 平台；如果需要真正独立的顾问会议，平台还必须支持干净的子 Agent 上下文。目录格式兼容不等于已经完成真实宿主验证，边界见 [COMPATIBILITY.md](COMPATIBILITY.md)。
 
 ## 核心特点
 
@@ -80,10 +80,10 @@ cp -R challenge-and-refine-ideas/skill/challenge-and-refine-ideas ~/.codex/skill
 使用 $challenge-and-refine-ideas 探索这个想法，暂时不要强迫得出结论。找出实质不同的解释，并问一个最可能改变方向的问题。
 ```
 
-仓库还保留了经过审查的独立分发包：[`dist/challenge-and-refine-ideas-v2.zip`](dist/challenge-and-refine-ideas-v2.zip)
+仓库还提供经过审查的独立分发包：[`dist/challenge-and-refine-ideas-v2.0.1.zip`](dist/challenge-and-refine-ideas-v2.0.1.zip)。包内包含 MIT 许可证。
 
 ```text
-SHA-256: B65303E51711727DDC9A90681932200E2402C3346BC8C2A2B011BAE040D0562A
+SHA-256: 7B8B69F30513D2E8E9F697616D161A55F5E3B8A6C7E0FBFE7AA417EDF6A45AF6
 ```
 
 如果让另一个 AI 安装，请把 [AI_INSTALL.md](AI_INSTALL.md) 交给它。
@@ -95,6 +95,8 @@ SHA-256: B65303E51711727DDC9A90681932200E2402C3346BC8C2A2B011BAE040D0562A
 - 不模拟庞大董事会，不用投票制造真相，也不以平衡措辞抹掉异议。
 - Agent 会议不能替代真实用户、实验、市场证据、专业人士、知情同意或法律授权。
 - 平台不能提供干净隔离上下文时，即使出现多个 Agent 名称，也必须标记为 `L0`。
+
+可直接复制的探索、比较、反证和高风险场景见 [EXAMPLES.md](EXAMPLES.md)。
 
 ## 本地验证
 
@@ -109,7 +111,10 @@ python tools/validate_release.py
 
 MIT，见 [LICENSE](LICENSE)。
 
+问题与参与规则见 [SUPPORT.md](SUPPORT.md)、[CONTRIBUTING.md](CONTRIBUTING.md) 和 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)。敏感问题请按 [SECURITY.md](SECURITY.md) 处理，不要公开提交细节。
+
 ## 相关项目
 
 - [Mastery Tutor](https://github.com/fanfanfanfanfan626/mastery-tutor)：让兼容的 AI Agent 成为本地优先的掌握式学习导师。
 - [Persistent AI Studio](https://github.com/fanfanfanfanfan626/orchestrate-agent-organization)：把已授权的产品工作从发现阶段延续到交付、运营和维护。
+- [Skill Governor](https://github.com/fanfanfanfanfan626/skill-governor)：审计和维护存在重叠的 Agent Skill 库。

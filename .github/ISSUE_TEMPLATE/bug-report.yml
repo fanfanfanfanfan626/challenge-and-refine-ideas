@@ -1,0 +1,52 @@
+name: Bug report
+description: Report a reproducible packaging, instruction, or validation problem.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Please remove private ideas, personal data, credentials, and confidential transcripts before submitting.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: v2.0.0 or a full commit SHA
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: Agent host and version
+      placeholder: Codex, Claude Code, another Agent Skills host, or serial-only environment
+    validations:
+      required: true
+  - type: dropdown
+    id: isolation
+    attributes:
+      label: Available adviser isolation
+      options:
+        - L0 serial lenses only
+        - L1 isolated memo contexts
+        - L2 blind challenge supported
+        - Unknown
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Include a minimal sanitized request and the exact route or command used.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true

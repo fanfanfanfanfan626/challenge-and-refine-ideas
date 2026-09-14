@@ -3,7 +3,7 @@
 > Open-source Agent Skill for exploring, refining, comparing, challenging, and deciding on ideas before implementation.
 
 Canonical repository: https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas
-Current release: 2.0.0
+Current release: 2.0.1
 License: MIT
 Languages: English, Simplified Chinese
 
@@ -22,3 +22,6 @@ Languages: English, Simplified Chinese
 Installation contract: https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/blob/main/AI_INSTALL.md
 English README: https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/blob/main/README.md
 Chinese README: https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/blob/main/README.zh-CN.md
+Copy-paste examples: https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/blob/main/EXAMPLES.md
+Compatibility evidence: https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/blob/main/COMPATIBILITY.md
+Support and issue guidance: https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/blob/main/SUPPORT.md

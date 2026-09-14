@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Installation contract
+    url: https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/blob/main/AI_INSTALL.md
+    about: Check the package identity and verification steps before reporting an installation problem.
+  - name: Security policy
+    url: https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/security/policy
+    about: Do not disclose sensitive security details in a public Issue.

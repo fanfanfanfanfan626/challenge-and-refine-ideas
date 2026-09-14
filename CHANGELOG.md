@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.1 — 2026-09-14
+
+- Included the MIT license inside the standalone Skill directory and release ZIP so redistributed copies retain the required notice.
+- Added deterministic release building, copy-paste scenarios, support and contribution templates, and current GitHub Actions maintenance.
+- Improved public documentation and machine-readable discovery without changing the Idea Council protocol.
+
 ## 2.0.0 — 2026-09-01
 
 - Added five explicit session intents: explore, refine, compare, challenge, and decide.

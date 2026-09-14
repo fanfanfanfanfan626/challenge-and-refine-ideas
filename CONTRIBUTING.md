@@ -16,7 +16,7 @@ python -m pip install -r requirements-dev.txt
 python tools/validate_release.py
 ```
 
-When the seven package files change, build and review a new versioned ZIP rather than silently replacing the audited v2 archive.
+When the eight package files change, build and review a new versioned ZIP rather than silently replacing a published archive. Use `tools/build_release.py` so the archive is deterministic.
 
 ## Pull request checklist
 

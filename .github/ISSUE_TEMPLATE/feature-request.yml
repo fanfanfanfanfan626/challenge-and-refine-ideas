@@ -1,0 +1,24 @@
+name: Feature request
+description: Propose a scoped improvement tied to a real discussion or decision failure.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: failure
+    attributes:
+      label: Workflow gap
+      description: What concrete framing, comparison, challenge, evidence, or handoff failure is not handled today?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe the smallest useful change and how it could be verified.
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Risks and boundaries
+      description: Note any privacy, professional-review, evidence, authorization, or compatibility implications.

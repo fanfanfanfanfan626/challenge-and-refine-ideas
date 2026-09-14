@@ -1,12 +1,13 @@
 # Idea Council — Challenge and Refine Ideas
 
-[Website](https://fanfanfanfanfan626.github.io/challenge-and-refine-ideas/) · [简体中文](README.zh-CN.md) · [AI installation guide](AI_INSTALL.md) · [Download v2 ZIP](dist/challenge-and-refine-ideas-v2.zip) · [Changelog](CHANGELOG.md)
+[Website](https://fanfanfanfanfan626.github.io/challenge-and-refine-ideas/) · [简体中文](README.zh-CN.md) · [AI installation guide](AI_INSTALL.md) · [Examples](EXAMPLES.md) · [Compatibility](COMPATIBILITY.md) · [Download v2.0.1 ZIP](dist/challenge-and-refine-ideas-v2.0.1.zip) · [Changelog](CHANGELOG.md)
 
 [![Release](https://img.shields.io/github/v/release/fanfanfanfanfan626/challenge-and-refine-ideas?label=release)](https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/releases)
+[![Validation](https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/actions/workflows/validate.yml/badge.svg)](https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/actions/workflows/validate.yml)
 
 `challenge-and-refine-ideas` is an agent skill for exploring, refining, comparing, challenging, and deciding on early ideas before implementation. One facilitator stays accountable to the user while the system selects the lightest useful set of reasoning lenses or isolated advisers.
 
-It is designed for Codex and can be adapted to other agent hosts that support local skills and, for independent councils, clean subagent contexts.
+It is designed for Codex and can be adapted to other agent hosts that support local skills and, for independent councils, clean subagent contexts. Package compatibility is not a claim of verified live-host behavior; see [COMPATIBILITY.md](COMPATIBILITY.md).
 
 ## What makes it different
 
@@ -99,10 +100,10 @@ Restart Codex, then try:
 Use $challenge-and-refine-ideas to explore this idea without forcing a decision yet. Surface materially different interpretations and ask the question that would most change the direction.
 ```
 
-An audited standalone package is also available at [`dist/challenge-and-refine-ideas-v2.zip`](dist/challenge-and-refine-ideas-v2.zip).
+An audited standalone package is also available at [`dist/challenge-and-refine-ideas-v2.0.1.zip`](dist/challenge-and-refine-ideas-v2.0.1.zip). It includes the package's MIT license.
 
 ```text
-SHA-256: B65303E51711727DDC9A90681932200E2402C3346BC8C2A2B011BAE040D0562A
+SHA-256: 7B8B69F30513D2E8E9F697616D161A55F5E3B8A6C7E0FBFE7AA417EDF6A45AF6
 ```
 
 For installation by another AI agent, use [AI_INSTALL.md](AI_INSTALL.md).
@@ -127,6 +128,8 @@ For installation by another AI agent, use [AI_INSTALL.md](AI_INSTALL.md).
 - Agent councils do not replace real users, experiments, market evidence, qualified professionals, consent, or legal authority.
 - When clean context isolation is unavailable, the result must be labeled `L0` even if several agent names were involved.
 
+For copy-paste explore, compare, challenge, and high-stakes scenarios, see [EXAMPLES.md](EXAMPLES.md).
+
 ## Validate a checkout
 
 ```bash
@@ -140,7 +143,10 @@ The release validator checks package structure, frontmatter, metadata, linked re
 
 MIT. See [LICENSE](LICENSE).
 
+Questions and contribution standards are documented in [SUPPORT.md](SUPPORT.md), [CONTRIBUTING.md](CONTRIBUTING.md), and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Report sensitive problems through [SECURITY.md](SECURITY.md), not a public Issue.
+
 ## Related projects
 
 - [Mastery Tutor](https://github.com/fanfanfanfanfan626/mastery-tutor) turns compatible AI agents into local-first mastery tutors.
 - [Persistent AI Studio](https://github.com/fanfanfanfanfan626/orchestrate-agent-organization) carries authorized product work from discovery into delivery and long-term stewardship.
+- [Skill Governor](https://github.com/fanfanfanfanfan626/skill-governor) audits and maintains overlapping Agent Skill libraries.

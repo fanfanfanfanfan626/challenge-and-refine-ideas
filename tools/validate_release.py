@@ -15,10 +15,12 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "skill" / "challenge-and-refine-ideas"
 SKILL_MD = SKILL / "SKILL.md"
-ARCHIVE = ROOT / "dist" / "challenge-and-refine-ideas-v2.zip"
-EXPECTED_ARCHIVE_SHA256 = "B65303E51711727DDC9A90681932200E2402C3346BC8C2A2B011BAE040D0562A"
+VERSION = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
+ARCHIVE = ROOT / "dist" / f"challenge-and-refine-ideas-v{VERSION}.zip"
+EXPECTED_ARCHIVE_SHA256 = "7B8B69F30513D2E8E9F697616D161A55F5E3B8A6C7E0FBFE7AA417EDF6A45AF6"
 
 REQUIRED_FILES = (
+    "LICENSE",
     "SKILL.md",
     "agents/openai.yaml",
     "assets/idea-charter.template.md",
@@ -113,10 +115,26 @@ def main() -> int:
         if path.is_file()
     } if SKILL.is_dir() else {}
 
+    if VERSION != "2.0.1":
+        error(errors, f"unexpected release version: {VERSION}")
+    if (SKILL / "LICENSE").read_bytes() != (ROOT / "LICENSE").read_bytes():
+        error(errors, "package LICENSE must match the repository LICENSE")
+    public_markers = {
+        ROOT / "README.md": f"challenge-and-refine-ideas-v{VERSION}.zip",
+        ROOT / "README.zh-CN.md": f"challenge-and-refine-ideas-v{VERSION}.zip",
+        ROOT / "AI_INSTALL.md": f"challenge-and-refine-ideas-v{VERSION}.zip",
+        ROOT / "docs" / "index.html": f'"version": "{VERSION}"',
+        ROOT / "docs" / "llms.txt": f"Current release: {VERSION}",
+        ROOT / "CHANGELOG.md": f"## {VERSION}",
+    }
+    for path, marker in public_markers.items():
+        if marker not in path.read_text(encoding="utf-8"):
+            error(errors, f"{path.relative_to(ROOT)} is missing version marker: {marker}")
+
     if set(package_files) != set(REQUIRED_FILES):
         missing = sorted(set(REQUIRED_FILES) - set(package_files))
         extra = sorted(set(package_files) - set(REQUIRED_FILES))
-        error(errors, f"package must contain exactly seven release files; missing={missing}, extra={extra}")
+        error(errors, f"package must contain exactly eight release files; missing={missing}, extra={extra}")
 
     if not SKILL_MD.is_file():
         error(errors, "missing skill/challenge-and-refine-ideas/SKILL.md")
@@ -163,7 +181,7 @@ def main() -> int:
     validate_archive(errors, package_files)
 
     sums = (ROOT / "SHA256SUMS").read_text(encoding="utf-8").strip()
-    expected_line = f"{EXPECTED_ARCHIVE_SHA256}  dist/challenge-and-refine-ideas-v2.zip"
+    expected_line = f"{EXPECTED_ARCHIVE_SHA256}  {ARCHIVE.relative_to(ROOT).as_posix()}"
     if sums != expected_line:
         error(errors, "SHA256SUMS does not match the audited archive")
 
