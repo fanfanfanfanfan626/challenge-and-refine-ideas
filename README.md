@@ -1,6 +1,6 @@
 # Idea Council — Challenge and Refine Ideas
 
-[Website](https://fanfanfanfanfan626.github.io/challenge-and-refine-ideas/) · [简体中文](README.zh-CN.md) · [AI installation guide](AI_INSTALL.md) · [Examples](EXAMPLES.md) · [Compatibility](COMPATIBILITY.md) · [Download v2.0.2 ZIP](dist/challenge-and-refine-ideas-v2.0.2.zip) · [Changelog](CHANGELOG.md)
+[Website](https://fanfanfanfanfan626.github.io/challenge-and-refine-ideas/) · [简体中文](README.zh-CN.md) · [AI installation guide](AI_INSTALL.md) · [Examples](EXAMPLES.md) · [Compatibility](COMPATIBILITY.md) · [Download v2.0.3 ZIP](dist/challenge-and-refine-ideas-v2.0.3.zip) · [Changelog](CHANGELOG.md)
 
 [![Release](https://img.shields.io/github/v/release/fanfanfanfanfan626/challenge-and-refine-ideas?label=release)](https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/releases)
 [![Validation](https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/actions/workflows/validate.yml/badge.svg)](https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/actions/workflows/validate.yml)
@@ -100,10 +100,10 @@ Restart Codex, then try:
 Use $challenge-and-refine-ideas to explore this idea without forcing a decision yet. Surface materially different interpretations and ask the question that would most change the direction.
 ```
 
-An audited standalone package is also available at [`dist/challenge-and-refine-ideas-v2.0.2.zip`](dist/challenge-and-refine-ideas-v2.0.2.zip). It includes the package's MIT license.
+An audited standalone package is also available at [`dist/challenge-and-refine-ideas-v2.0.3.zip`](dist/challenge-and-refine-ideas-v2.0.3.zip). It includes the package's MIT license.
 
 ```text
-SHA-256: AEEF9FD7233C9578C84C20DF05645720BB7B575EEB4F51629DAF6E09D796FB67
+SHA-256: 24D940A87FD45DDF1608BBE734999A9E2168526DFDCD1DE6D5BF55266470A11F
 ```
 
 For installation by another AI agent, use [AI_INSTALL.md](AI_INSTALL.md).

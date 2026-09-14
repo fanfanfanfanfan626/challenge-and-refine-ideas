@@ -17,7 +17,7 @@ SKILL = ROOT / "skill" / "challenge-and-refine-ideas"
 SKILL_MD = SKILL / "SKILL.md"
 VERSION = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
 ARCHIVE = ROOT / "dist" / f"challenge-and-refine-ideas-v{VERSION}.zip"
-EXPECTED_ARCHIVE_SHA256 = "AEEF9FD7233C9578C84C20DF05645720BB7B575EEB4F51629DAF6E09D796FB67"
+EXPECTED_ARCHIVE_SHA256 = "24D940A87FD45DDF1608BBE734999A9E2168526DFDCD1DE6D5BF55266470A11F"
 
 REQUIRED_FILES = (
     "LICENSE",
@@ -115,7 +115,7 @@ def main() -> int:
         if path.is_file()
     } if SKILL.is_dir() else {}
 
-    if VERSION != "2.0.2":
+    if VERSION != "2.0.3":
         error(errors, f"unexpected release version: {VERSION}")
     if (SKILL / "LICENSE").read_bytes() != (ROOT / "LICENSE").read_bytes():
         error(errors, "package LICENSE must match the repository LICENSE")

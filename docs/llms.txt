@@ -3,7 +3,7 @@
 > Open-source Agent Skill for exploring, refining, comparing, challenging, and deciding on ideas before implementation.
 
 Canonical repository: https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas
-Current release: 2.0.2
+Current release: 2.0.3
 License: MIT
 Languages: English, Simplified Chinese
 

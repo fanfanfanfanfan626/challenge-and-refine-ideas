@@ -4,7 +4,7 @@ Compatibility claims are intentionally narrower than package-format claims.
 
 | Environment or capability | Status | Evidence and limit |
 | --- | --- | --- |
-| Repository and standalone ZIP | Verified for 2.0.2 | The validator checks the exact eight-file package, nested MIT license, references, invariants, local-path leakage, ZIP bytes, checksum, and public version markers. |
+| Repository and standalone ZIP | Verified for 2.0.3 | The validator checks the exact eight-file package, nested MIT license, references, invariants, local-path leakage, ZIP bytes, checksum, and public version markers. |
 | Codex Skill discovery | Package-compatible | The package follows the local Skill directory and `SKILL.md` layout. A named, repeatable live-host evaluation has not yet been published. |
 | Other Agent Skills hosts | Portable instructions | Hosts must preserve relative files and expose the Skill entry point. Discovery, permissions, and invocation behavior must be verified on that host. |
 | `L0` serial lenses | Baseline | Works without child-agent isolation, but the perspectives are correlated and must be labeled `L0`. |
