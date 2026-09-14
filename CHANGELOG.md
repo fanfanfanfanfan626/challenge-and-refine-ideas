@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.2 — 2026-09-14
+
+- Make release archive member ordering identical on Windows, Linux, and macOS.
+- Keep the 2.0.1 tag immutable after its cross-platform rebuild check exposed the ordering issue.
+
 ## 2.0.1 — 2026-09-14
 
 - Included the MIT license inside the standalone Skill directory and release ZIP so redistributed copies retain the required notice.
