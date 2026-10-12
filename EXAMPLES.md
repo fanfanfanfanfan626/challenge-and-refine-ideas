@@ -31,7 +31,7 @@ Maturity: challenged
 Evidence state: test-needed
 Human disposition: undecided
 O-001 — Offline recovery is unspecified — open
-O-002 — The cost estimate lacks usage data — evidence-needed
+O-002 — The cost estimate lacks usage data — requires evidence
 Next reversible step: test recovery with three representative failure cases
 ```
 

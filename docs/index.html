@@ -28,7 +28,7 @@
     "codeRepository": "https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas",
     "license": "https://opensource.org/license/mit",
     "programmingLanguage": "Markdown",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "inLanguage": ["en", "zh-CN"]
   }
   </script>
@@ -63,12 +63,12 @@
 </head>
 <body>
   <div class="wrap">
-    <nav><b>Idea Council · v2.0.3</b><div><a href="#install">Install</a><a href="#中文">中文</a><a href="https://github.com/fanfanfanfan626/challenge-and-refine-ideas">GitHub</a></div></nav>
+    <nav><b>Idea Council · v2.0.4</b><div><a href="#install">Install</a><a href="#中文">中文</a><a href="https://github.com/fanfanfanfan626/challenge-and-refine-ideas">GitHub</a></div></nav>
     <header>
       <p class="eyebrow">Open-source Agent Skill</p>
       <h1>Better ideas need honest opposition.</h1>
       <p class="lede">Idea Council helps an AI agent explore, refine, compare, challenge, and decide on early ideas. It keeps evidence separate from opinion, preserves material objections, and never turns agent agreement into proof.</p>
-      <div class="actions"><a class="button primary" href="#install">Install the Skill</a><a class="button" href="https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas">Read the source</a></div>
+      <div class="actions"><a class="button primary" href="#first-use">Choose your first session</a><a class="button" href="#install">Install the Skill</a><a class="button" href="https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas">Read the source</a></div>
     </header>
     <section>
       <h2>Use the lightest process that changes the decision.</h2>
@@ -82,6 +82,12 @@
       </div>
     </section>
     <section id="install">
+      <p class="eyebrow" id="first-use">Start with one real question</p>
+      <h2>Still exploring, or ready for opposition?</h2>
+      <p>After installing, copy one of these requests into your compatible agent. These are templates, not a browser AI demo or a guarantee of model behavior.</p>
+      <details><summary>Explore an idea without forcing a decision</summary><pre>Use $challenge-and-refine-ideas to explore [my idea]. Keep two or three different interpretations open and ask one generative question. Do not recommend, decide or prescribe an experiment until I ask to converge.</pre></details>
+      <details><summary>Challenge the current version</summary><pre>Use $challenge-and-refine-ideas to challenge this latest candidate: [current proposal]. First restate it accurately. Number material objections, preserve unresolved risks, and separate external evidence from adviser opinion. Do not execute anything.</pre></details>
+      <p><a href="https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas/blob/main/skill/challenge-and-refine-ideas/references/first-use-scenarios.md">All five session prompts, including compare and decide →</a></p>
       <p class="eyebrow">One-prompt install</p>
       <h2>Give the repository to your agent.</h2>
       <pre>Install challenge-and-refine-ideas from https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas. Read AI_INSTALL.md first, preserve the complete skill directory, and verify the installation before reporting success.</pre>

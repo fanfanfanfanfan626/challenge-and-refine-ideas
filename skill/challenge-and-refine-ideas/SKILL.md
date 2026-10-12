@@ -37,6 +37,8 @@ First infer the user's session intent:
 - `challenge`: steelman the current candidate, then try to reject or reshape it;
 - `decide`: make the choice, dissent, evidence sufficiency, and next commitment explicit.
 
+For first-use requests covering all five intents, read `references/first-use-scenarios.md`. These are request templates, not transcripts, testimonials, external evidence, or proof of live-host or model behavior.
+
 Do not force an `explore` session to produce a recommendation or experiment before the user wants convergence. Move toward `decide` only when the user asks or the discussion naturally reaches a commitment point.
 
 Infer the lightest route that can reduce the current uncertainty:
@@ -240,6 +242,7 @@ This Skill develops and challenges intent; it does not automatically implement t
 - for a substantial product, material feature, or governed multi-Agent project, use `$orchestrate-agent-organization` and preserve the Charter's dissent, evidence gaps, non-goals, and human-reserved choices;
 - for a small reversible task, execute directly under the clarified scope;
 - stop for professional or human approval when the decision creates legal, medical, financial, safety, privacy, or broad external consequences.
+- Do not execute or hand off a consequential high-risk action while required professional, legal, consent, safety, or governance review is missing, while evidence is not `sufficient-for-scope`, or before the human explicitly authorizes that exact action.
 
 ## Prevent meeting failure modes
 

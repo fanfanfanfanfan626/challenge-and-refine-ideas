@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.4 — 2026-10-12
+
+- Add package-internal first-use prompts for all five meeting intents, with exploration, evidence/opinion, current-candidate and high-risk execution boundaries.
+- Add five static protocol contract tests, including objection and three-axis state consistency. These are not live-model evaluations.
+- Correct the example objection status to `requires evidence`; verify exact ZIP member order and reproducible metadata without hardcoded version/hash constants.
+
 ## 2.0.3 — 2026-09-14
 
 - Fix the ZIP creator-platform field and use stored members so release bytes do not depend on the host OS or compression library.
