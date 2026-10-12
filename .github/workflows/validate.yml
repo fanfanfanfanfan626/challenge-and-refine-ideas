@@ -8,6 +8,18 @@ permissions:
   contents: read
 
 jobs:
+  windows-install-docs:
+    runs-on: windows-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p test_install_and_build.py -v
+
   release-audit:
     runs-on: ubuntu-latest
     steps:
