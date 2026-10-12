@@ -82,6 +82,9 @@ The installable package is [`skill/challenge-and-refine-ideas`](skill/challenge-
 ```powershell
 git clone https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas.git
 $destination = Join-Path $env:USERPROFILE ".codex\skills\challenge-and-refine-ideas"
+if ($null -ne (Get-Item -LiteralPath $destination -Force -ErrorAction SilentlyContinue)) {
+    throw "Destination already exists. See AI_INSTALL.md before updating."
+}
 New-Item -ItemType Directory -Force (Split-Path $destination) | Out-Null
 Copy-Item ".\challenge-and-refine-ideas\skill\challenge-and-refine-ideas" $destination -Recurse
 ```
@@ -90,9 +93,17 @@ Copy-Item ".\challenge-and-refine-ideas\skill\challenge-and-refine-ideas" $desti
 
 ```bash
 git clone https://github.com/fanfanfanfanfan626/challenge-and-refine-ideas.git
-mkdir -p ~/.codex/skills
-cp -R challenge-and-refine-ideas/skill/challenge-and-refine-ideas ~/.codex/skills/challenge-and-refine-ideas
+destination=~/.codex/skills/challenge-and-refine-ideas
+if [ -e "$destination" ] || [ -L "$destination" ]; then
+    printf '%s\n' 'Destination already exists. See AI_INSTALL.md before updating.' >&2
+    false
+else
+    mkdir -p "$(dirname "$destination")" &&
+    cp -R challenge-and-refine-ideas/skill/challenge-and-refine-ideas "$destination"
+fi
 ```
+
+These commands are for a fresh install. They stop if a destination already exists; they do not merge or nest another copy. For an update, follow the [backup and replacement checks](AI_INSTALL.md#updating-an-existing-installation).
 
 Restart Codex, then try:
 

@@ -30,6 +30,14 @@ For Codex, the default destination is:
 ~/.codex/skills/challenge-and-refine-ideas/
 ```
 
+## Updating an existing installation
+
+The README commands intentionally refuse an existing directory, file or link. Do not repeat a recursive copy into an existing directory: that can leave the old entry point active with a second package nested underneath it.
+
+Close the host, verify the exact existing installation path, inspect any local edits, and obtain approval for replacement. Move only that specific skill directory to a backup outside the host's discovery roots. Then use the fresh-install procedure and confirm `SKILL.md`, `LICENSE`, `agents/`, `assets/` and `references/` are direct children of the destination. Do not delete the parent skills directory or other skills. Keep the backup until discovery and a real invocation have been checked. Stop for unexpected files or links rather than following them.
+
+## Verify discovery separately from use
+
 After installation, verify that the destination contains `SKILL.md`, then restart Codex. A valid invocation is:
 
 ```text

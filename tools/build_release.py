@@ -20,7 +20,7 @@ def main() -> int:
     parser.add_argument("--checksum-output", type=Path)
     args = parser.parse_args()
 
-    output = args.output if args.output.is_absolute() else ROOT / args.output
+    output = (args.output if args.output.is_absolute() else ROOT / args.output).resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
 
     with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_STORED) as archive:
@@ -40,7 +40,11 @@ def main() -> int:
     if args.checksum_output:
         checksum = args.checksum_output if args.checksum_output.is_absolute() else ROOT / args.checksum_output
         checksum.parent.mkdir(parents=True, exist_ok=True)
-        checksum.write_text(f"{digest}  {output.relative_to(ROOT).as_posix()}\n", encoding="utf-8", newline="\n")
+        try:
+            label = output.relative_to(ROOT).as_posix()
+        except ValueError:
+            label = output.name
+        checksum.write_text(f"{digest}  {label}\n", encoding="utf-8", newline="\n")
     print(digest)
     return 0
 
