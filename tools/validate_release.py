@@ -17,7 +17,8 @@ SKILL = ROOT / "skill" / "challenge-and-refine-ideas"
 SKILL_MD = SKILL / "SKILL.md"
 VERSION = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
 ARCHIVE = ROOT / "dist" / f"challenge-and-refine-ideas-v{VERSION}.zip"
-EXPECTED_ARCHIVE_SHA256 = "24D940A87FD45DDF1608BBE734999A9E2168526DFDCD1DE6D5BF55266470A11F"
+CHECKSUM = (ROOT / "SHA256SUMS").read_text(encoding="utf-8").strip()
+EXPECTED_ARCHIVE_SHA256 = CHECKSUM.split()[0] if CHECKSUM else ''
 
 REQUIRED_FILES = (
     "LICENSE",
@@ -26,6 +27,7 @@ REQUIRED_FILES = (
     "assets/idea-charter.template.md",
     "references/discussion-methods.md",
     "references/evidence-grounding.md",
+    "references/first-use-scenarios.md",
     "references/idea-charter.md",
     "references/perspective-lenses.md",
 )
@@ -83,6 +85,12 @@ def validate_archive(errors: list[str], package_files: dict[str, bytes]) -> None
         error(errors, f"archive SHA-256 mismatch: {digest}")
 
     with zipfile.ZipFile(ARCHIVE) as archive:
+        infos=archive.infolist()
+        if [i.filename for i in infos]!=['challenge-and-refine-ideas/'+n for n in sorted(package_files)]:
+            error(errors,'archive member order/list differs from exact package manifest')
+        for i in infos:
+            if i.date_time!=(1980,1,1,0,0,0) or i.compress_type!=zipfile.ZIP_STORED or i.create_system!=3 or i.external_attr!=0o100644<<16:
+                error(errors,f'non-deterministic ZIP metadata: {i.filename}')
         members = {
             name: archive.read(name)
             for name in archive.namelist()
@@ -108,6 +116,8 @@ def validate_archive(errors: list[str], package_files: dict[str, bytes]) -> None
 
 def main() -> int:
     errors: list[str] = []
+    if not re.fullmatch(r'[0-9A-F]{64}  '+re.escape(ARCHIVE.relative_to(ROOT).as_posix()),CHECKSUM):
+        error(errors,'SHA256SUMS must contain one matching release entry')
 
     package_files = {
         path.relative_to(SKILL).as_posix(): path.read_bytes()
@@ -115,7 +125,7 @@ def main() -> int:
         if path.is_file()
     } if SKILL.is_dir() else {}
 
-    if VERSION != "2.0.3":
+    if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", VERSION):
         error(errors, f"unexpected release version: {VERSION}")
     if (SKILL / "LICENSE").read_bytes() != (ROOT / "LICENSE").read_bytes():
         error(errors, "package LICENSE must match the repository LICENSE")
@@ -134,7 +144,7 @@ def main() -> int:
     if set(package_files) != set(REQUIRED_FILES):
         missing = sorted(set(REQUIRED_FILES) - set(package_files))
         extra = sorted(set(package_files) - set(REQUIRED_FILES))
-        error(errors, f"package must contain exactly eight release files; missing={missing}, extra={extra}")
+        error(errors, f"package must contain exactly {len(REQUIRED_FILES)} release files; missing={missing}, extra={extra}")
 
     if not SKILL_MD.is_file():
         error(errors, "missing skill/challenge-and-refine-ideas/SKILL.md")

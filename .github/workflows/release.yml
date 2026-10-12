@@ -31,7 +31,9 @@ jobs:
           cmp "work/challenge-and-refine-ideas-v${version}.zip" "dist/challenge-and-refine-ideas-v${version}.zip"
           test "$(sha256sum "work/challenge-and-refine-ideas-v${version}.zip" | cut -d' ' -f1)" = "$(cut -d' ' -f1 SHA256SUMS | tr 'A-F' 'a-f')"
       - name: Validate release
-        run: python tools/validate_release.py
+        run: |
+          python -m unittest discover -s tests -v
+          python tools/validate_release.py
       - name: Publish immutable GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}

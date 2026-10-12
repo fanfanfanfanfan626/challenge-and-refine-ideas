@@ -16,13 +16,13 @@ Package facts:
 - Do not copy root-level `README*`, `dist/`, `tools/`, or `.github/` into the host's skill directory. The package's nested `LICENSE` must remain with the Skill.
 - Do not overwrite an existing installation without first telling the user what will change.
 
-An audited ZIP is available at `dist/challenge-and-refine-ideas-v2.0.3.zip` with SHA-256:
+An audited ZIP is available at `dist/challenge-and-refine-ideas-v2.0.4.zip` with SHA-256:
 
 ```text
-24D940A87FD45DDF1608BBE734999A9E2168526DFDCD1DE6D5BF55266470A11F
+8CD26839FE7F959BF8AB550E4B1E5C4D02BC0A833B68FC8BD04733F992D75315
 ```
 
-The ZIP expands to one top-level `challenge-and-refine-ideas/` directory containing exactly eight files, including the MIT license, and no cache files.
+The ZIP expands to one top-level `challenge-and-refine-ideas/` directory containing exactly nine files, including the MIT license, and no cache files.
 
 For Codex, the default destination is:
 
